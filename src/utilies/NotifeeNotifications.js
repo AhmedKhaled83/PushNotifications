@@ -50,7 +50,7 @@ const OnMessage = async remoteMessage => {
     body: remoteMessage.notification.body, //'Main body content of the notification',
     android: {
       channelId,
-      sound: 'default'
+      sound: 'default',
     },
   });
 };
@@ -61,7 +61,6 @@ const NotificationListner = () => {
       'onNotificationOpenedApp: When the application is running, but in the background.',
       remoteMessage.notification,
     );
-    //   OnMessage(remoteMessage)
   });
 
   messaging()
